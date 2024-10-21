@@ -50,7 +50,8 @@ int main() {
   if (exist_negative_cycle) cout << "Negative cycle" << endl;
   else {
     for (int v = 0; v < N; v++) {
-      if (dist[v] < INF) cout << "INF" << endl;
+      if (dist[v] < INF) cout << dist[v] << endl;
+      else cout << "INF" << endl;
     }
   }
 }
