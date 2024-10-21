@@ -5,7 +5,7 @@ using namespace std;
 struct Graph {
   struct Edge {
     int rev, from, to, cap;
-    Edge(int r, int, f, int t, int c) : rev(r), from(f), to(t), cap(c) {}
+    Edge(int r, int f, int t, int c) : rev(r), from(f), to(t), cap(c) {}
   };
 
   vector<vector<Edge>> list;
@@ -52,7 +52,7 @@ struct FordFulkerson {
 
   int solve(Graph &G, int s, int t) {
     int res = 0;
-    While(true) {
+    while (true) {
       seen.assign((int)G.size(), 0);
       int flow = fodfs(G, s, t, INF);
       if (flow == 0) return res;
@@ -61,4 +61,4 @@ struct FordFulkerson {
     }
     return 0;
   }
-}
+};
